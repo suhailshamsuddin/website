@@ -1,0 +1,42 @@
+<HEAD><TITLE>Login Here</TITLE>
+<script>
+function vali() {
+var u=document.forms["f1"]["username"].value;
+var p=document.forms["f1"]["password"].value;
+if(u == 'user' && p== 'pwd') {
+window.location="bike1.html";
+return false;
+}
+else
+{
+alert("Please Try again!");
+return false;
+}
+}
+</script>
+</HEAD>
+<style>body {
+        background-image: url("register.jpeg");
+} </style>
+<div id="login_form">
+    <form name="f1" method="post" onSubmit="return vali();" action="bike1.html" id="f1" >
+        <b><table>
+            <tr>
+                <td class="f1_label">User Name :</td><td><input type="text" name="username" value="" required />
+                </td>
+            </tr>
+            <tr>
+                <td class="f1_label">Password  :</td><td><input type="password" name="password" value="" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="login" value="Log In" onclick="return vali()" style="font-size:18px; " />
+                </td>
+            </tr>
+        </table></b>
+        
+    </form> 
+</div>
+<script>
+
